@@ -2,7 +2,7 @@ package net.minidev.json.actions;
 
 import net.minidev.json.JSONObject;
 import net.minidev.json.actions.traverse.JSONTraverser;
-import net.minidev.json.actions.traverse.RemoveElementsJsonAction;
+import net.minidev.json.actions.traverse.RemoveElementsJSONAction;
 import net.minidev.json.actions.traverse.JSONTraverseAction;
 
 import java.util.*;
@@ -42,7 +42,7 @@ public class ElementRemover
 
 	public JSONObject remove(JSONObject objectToClean)
 	{
-		JSONTraverseAction strategy = new RemoveElementsJsonAction(this.elementsToRemove);
+		JSONTraverseAction strategy = new RemoveElementsJSONAction(this.elementsToRemove);
 		JSONTraverser traversal = new JSONTraverser(strategy);
 		traversal.traverse(objectToClean);
 		return (JSONObject) strategy.result();

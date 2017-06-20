@@ -21,7 +21,7 @@ import java.util.Map.Entry;
  * @author adoneitan@gmail.com
  *
  */
-public class LocatePathsJsonAction implements JSONTraverseAction
+public class LocatePathsJSONAction implements JSONTraverseAction
 {
 	protected List<String> pathsFound;
 	protected List<String> pathsToFind;
@@ -32,7 +32,7 @@ public class LocatePathsJsonAction implements JSONTraverseAction
 	 * @param pathsToFind A path to a field in the {@link JSONObject} should be specified in n-gram format where keys are chained:
 	 * k0[[[.k1].k2]...]
 	 */
-	public LocatePathsJsonAction(List<String> pathsToFind, PathDelimiter delim)
+	public LocatePathsJSONAction(List<String> pathsToFind, PathDelimiter delim)
 	{
 		this.pathsToFind = pathsToFind;
 		this.delim = delim;

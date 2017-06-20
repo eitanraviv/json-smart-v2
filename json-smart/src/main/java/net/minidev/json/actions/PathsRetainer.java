@@ -6,7 +6,7 @@ import net.minidev.json.actions.path.DotDelimiter;
 import net.minidev.json.actions.path.PathDelimiter;
 import net.minidev.json.actions.traverse.JSONTraverseAction;
 import net.minidev.json.actions.traverse.JSONTraverser;
-import net.minidev.json.actions.traverse.LocatePathsJsonAction;
+import net.minidev.json.actions.traverse.LocatePathsJSONAction;
 import net.minidev.json.actions.traverse.RetainPathsJsonAction;
 
 import java.util.Arrays;
@@ -77,9 +77,9 @@ public class PathsRetainer
 		 * object = {k0:v0}     retain = {k0.k1}
 		 * so the false path to retain has to be removed from the pathsToRetain list.
 		 *
-		 * The {@link LocatePathsJsonAction} returns only paths which exist in the object.
+		 * The {@link net.minidev.json.actions.traverse.LocatePathsJSONAction} returns only paths which exist in the object.
 		 */
-		JSONTraverseAction locateAction = new LocatePathsJsonAction(pathsToRetain, pathDelimiter);
+		JSONTraverseAction locateAction = new LocatePathsJSONAction(pathsToRetain, pathDelimiter);
 		JSONTraverser t1 = new JSONTraverser(locateAction);
 		t1.traverse(object);
 		List<String> realPathsToRetain = (List<String>) locateAction.result();

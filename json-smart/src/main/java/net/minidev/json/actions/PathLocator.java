@@ -5,7 +5,7 @@ import net.minidev.json.JSONObject;
 import net.minidev.json.actions.path.DotDelimiter;
 import net.minidev.json.actions.path.PathDelimiter;
 import net.minidev.json.actions.traverse.JSONTraverser;
-import net.minidev.json.actions.traverse.LocatePathsJsonAction;
+import net.minidev.json.actions.traverse.LocatePathsJSONAction;
 import net.minidev.json.actions.traverse.JSONTraverseAction;
 
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class PathLocator
 
 	public List<String> locate(JSONObject object)
 	{
-		JSONTraverseAction action = new LocatePathsJsonAction(this.pathsToFind, pathDelimiter);
+		JSONTraverseAction action = new LocatePathsJSONAction(this.pathsToFind, pathDelimiter);
 		JSONTraverser traversal = new JSONTraverser(action).with(pathDelimiter);
 		traversal.traverse(object);
 		return (List<String>) action.result();

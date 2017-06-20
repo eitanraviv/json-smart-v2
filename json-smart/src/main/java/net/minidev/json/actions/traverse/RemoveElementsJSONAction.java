@@ -19,19 +19,19 @@ import java.util.Map.Entry;
  * @author adoneitan@gmail.com
  *
  */
-public class RemoveElementsJsonAction implements JSONTraverseAction
+public class RemoveElementsJSONAction implements JSONTraverseAction
 {
 	protected JSONObject result;
 	protected final Map<String, Object> elementsToRemove;
 	protected final boolean allowDotChar;
 
-	public RemoveElementsJsonAction(Map<String, Object> elementsToRemove, boolean allowDotChar)
+	public RemoveElementsJSONAction(Map<String, Object> elementsToRemove, boolean allowDotChar)
 	{
 		this.elementsToRemove = elementsToRemove;
 		this.allowDotChar = allowDotChar;
 	}
 
-	public RemoveElementsJsonAction(Map<String, Object> elementsToRemove)
+	public RemoveElementsJSONAction(Map<String, Object> elementsToRemove)
 	{
 		this(elementsToRemove, false);
 	}
